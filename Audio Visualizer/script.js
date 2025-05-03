@@ -435,4 +435,6 @@ window.addEventListener('resize', () => {
         const bufferLength = analyser.frequencyBinCount;
         const dataArray = new Uint8Array(bufferLength);
 const audioUpload = document.getElementById('audio-upload');
-const playPauseBtn = document.getElementById('play-pause-btn');
+const playPauseBtn = document.getElementById('play-pause-btn');
+const audioSource = document.getElementById('audio-source');
+const visualizerCanvas = document.getElementById('visualizer');
