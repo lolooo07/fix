@@ -653,3 +653,6 @@ window.addEventListener('resize', () => {
         drawVisualizer(bufferLength, dataArray);
     }
 });
+
+const audioUpload = document.getElementById('audio-upload');
+const playPauseBtn = document.getElementById('play-pause-btn');
