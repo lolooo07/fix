@@ -233,4 +233,8 @@ let isPlaying = false;
 // Function to set up the Web Audio API
 function setupAudioContext() {
     if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioCtx.createAnalyser();
+        source = audioCtx.createMediaElementSource(audioSource);
+        
+        // Connect the nodes in the audio graph
