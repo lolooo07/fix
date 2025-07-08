@@ -237,4 +237,8 @@ function setupAudioContext() {
         analyser = audioCtx.createAnalyser();
         source = audioCtx.createMediaElementSource(audioSource);
         
-        // Connect the nodes in the audio graph
+        // Connect the nodes in the audio graph
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        
+        // Set up the analyser for frequency data
