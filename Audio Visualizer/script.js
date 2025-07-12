@@ -701,4 +701,6 @@ audioUpload.addEventListener('change', (e) => {
         setupAudioContext();
     }
 });
-
+
+// Function to play or pause the audio
+playPauseBtn.addEventListener('click', () => {
