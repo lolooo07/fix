@@ -289,4 +289,8 @@ function drawVisualizer(bufferLength, dataArray) {
     canvasCtx.clearRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
     
     // Request the next frame
-    requestAnimationFrame(() => drawVisualizer(bufferLength, dataArray));
+    requestAnimationFrame(() => drawVisualizer(bufferLength, dataArray));
+    
+    // Get the frequency data
+    analyser.getByteFrequencyData(dataArray);
+
