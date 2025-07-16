@@ -317,4 +317,8 @@ document.addEventListener('click', () => {
         audioCtx.resume();
     }
 });
-
+
+// Handle window resize to keep the canvas responsive
+window.addEventListener('resize', () => {
+    if (isPlaying) {
+        // Redraw the visualizer if a song is playing
