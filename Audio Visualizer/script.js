@@ -357,4 +357,8 @@ function setupAudioContext() {
         const dataArray = new Uint8Array(bufferLength);
         
         // Start the visualization loop
-        drawVisualizer(bufferLength, dataArray);
+        drawVisualizer(bufferLength, dataArray);
+    }
+}
+
+// Function to handle the audio file upload
