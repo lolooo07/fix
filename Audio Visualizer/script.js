@@ -389,4 +389,8 @@ playPauseBtn.addEventListener('click', () => {
     }
 });
 
-// Function to draw the visualizer
+// Function to draw the visualizer
+function drawVisualizer(bufferLength, dataArray) {
+    // Set the canvas size to match the window size for responsiveness
+    visualizerCanvas.width = visualizerCanvas.clientWidth;
+    visualizerCanvas.height = visualizerCanvas.clientHeight;
