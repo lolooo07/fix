@@ -413,4 +413,8 @@ function drawVisualizer(bufferLength, dataArray) {
         // Simple color gradient based on bar height
         const hue = i / bufferLength * 360;
         canvasCtx.fillStyle = `hsl(${hue}, 100%, 50%)`;
-        
+        
+        // Draw the bar
+        canvasCtx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
+        
+        x += barWidth + 1; // Add a small gap between bars
