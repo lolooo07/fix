@@ -401,4 +401,8 @@ function drawVisualizer(bufferLength, dataArray) {
     // Request the next frame
     requestAnimationFrame(() => drawVisualizer(bufferLength, dataArray));
     
-    // Get the frequency data
+    // Get the frequency data
+    analyser.getByteFrequencyData(dataArray);
+
+    const barWidth = (visualizerCanvas.width / bufferLength) * 2;
+    let x = 0;
