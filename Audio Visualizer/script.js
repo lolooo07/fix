@@ -761,4 +761,6 @@ window.addEventListener('resize', () => {
         const bufferLength = analyser.frequencyBinCount;
         const dataArray = new Uint8Array(bufferLength);
         drawVisualizer(bufferLength, dataArray);
-    }
+    }
+});
+
