@@ -40,4 +40,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container">
+        <header>
+            <h1>Audio Visualizer</h1>
+            <p>Upload an audio file (.mp3, .wav) to see a real-time visualization.</p>
+        </header>
+        <main>
+            <div class="controls">
+                <input type="file" id="audio-upload" accept="audio/*">
+                <button id="play-pause-btn" disabled>Play</button>
+            </div>
+            <canvas id="visualizer"></canvas>
+            <audio id="audio-source" style="display: none;"></audio>
