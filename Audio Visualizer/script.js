@@ -152,4 +152,15 @@ audioUpload.addEventListener('change', (e) => {
         isPlaying = false;
         
         // Set up the audio context once a file is loaded
-        setupAudioContext();
+        setupAudioContext();
+    }
+});
+
+// Function to play or pause the audio
+playPauseBtn.addEventListener('click', () => {
+    if (audioSource.paused) {
+        audioSource.play();
+        playPauseBtn.textContent = "Pause";
+        isPlaying = true;
+    } else {
+        audioSource.pause();
