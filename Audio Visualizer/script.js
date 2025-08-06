@@ -174,4 +174,15 @@ function drawVisualizer(bufferLength, dataArray) {
     // Set the canvas size to match the window size for responsiveness
     visualizerCanvas.width = visualizerCanvas.clientWidth;
     visualizerCanvas.height = visualizerCanvas.clientHeight;
-    
+    
+    // Clear the canvas
+    canvasCtx.clearRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
+    
+    // Request the next frame
+    requestAnimationFrame(() => drawVisualizer(bufferLength, dataArray));
+    
+    // Get the frequency data
+    analyser.getByteFrequencyData(dataArray);
+
+    const barWidth = (visualizerCanvas.width / bufferLength) * 2;
+    let x = 0;
