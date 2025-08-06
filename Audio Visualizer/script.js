@@ -185,4 +185,15 @@ function drawVisualizer(bufferLength, dataArray) {
     analyser.getByteFrequencyData(dataArray);
 
     const barWidth = (visualizerCanvas.width / bufferLength) * 2;
-    let x = 0;
+    let x = 0;
+    
+    for(let i = 0; i < bufferLength; i++) {
+        const barHeight = dataArray[i] * 1.5;
+        
+        // Simple color gradient based on bar height
+        const hue = i / bufferLength * 360;
+        canvasCtx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+        
+        // Draw the bar
+        canvasCtx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
+        
