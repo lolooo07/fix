@@ -120,4 +120,15 @@ footer {
     --primary-color: #4c51bf;
     --secondary-color: #63b3ed;
     --border-color: #4a5568;
-}
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
